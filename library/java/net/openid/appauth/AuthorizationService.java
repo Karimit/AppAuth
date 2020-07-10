@@ -137,6 +137,11 @@ public class AuthorizationService {
         checkNotDisposed();
         return mCustomTabManager.createTabBuilder(possibleUris);
     }
+    
+    public CustomTabsIntent.Builder createCustomTabsIntentBuilder(CustomTabsSession session) {
+        checkNotDisposed();
+        return mCustomTabManager.createTabBuilder(session);
+    }
 
     /**
      * Sends an authorization request to the authorization service, using a
